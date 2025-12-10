@@ -13,7 +13,7 @@ make all test // все вместе
 ```
 ./hamming encode 4 7 1011 // 0110011
 ./hamming decode 7 0110011 // 1011
-./hamming valid 7 0110010 // 0
+./hamming is_valid 7 0110010 // 0
 ```
 
 #### Тесты
@@ -27,3 +27,4 @@ make all test // все вместе
 make test
 ./test
 ```
+
