@@ -1,32 +1,34 @@
-# Dm_M3113
 
-Практик:  
-    - Матвеев Сергей Андреевич M3338 @lil_ya_da_da 
-    
- Менторы: 
- 
-    - Валеев Тимур Ильич M3201 @Priest_Faria  
-    - Осикин Григорий Максимович M3205 @McHomaa  
-    - Нефедов Дмитрий Алексеевич M3300 @grumbletumbles  
-    - Радионов Михаил Леонидович M3300 @radmickey  
-    - Игорь Толстокулаков Витальевич M3200 @biqiboqi  
-    - Патолицына Анастасия Викторовна M3307 @alllioooooo  
-    - Тихонов Михаил Владимирович M3236 @AbubiB0ba  
+### Батуренко Илья М3114
 
-repository with tasks for the M3113 group
+## Код Хэмминга
 
-# 1 практика 07.09.2004
-## "Мне есть чем вас удивить..."
+Для запуска и проверки использовать makefile
 
-### 1 Задание 
-1. A = \{1, 2, 3, 4, 5\}, B = \{1, 2, 3, 6, 7\} \
- Найдите $A \cup B, A \cap B, A \oplus B, A \textbackslash B$
-2. $\mathbb{R} \textbackslash \mathbb{R}_{+}$
-3. $(\mathbb{Q} \cap \mathbb{Z}) \textbackslash \mathbb{N}$
-4. $\overline{\mathbb{R}}$
-5. $Cl(\mathbb{R}) \textbackslash \mathbb{R}$
+```
+make // основной функционал
+make test // тесты
+make all test // все вместе
+```
 
-### 2 Задание
-1. A = \{ $(x, y) | x^2 + y^2 < 3$ \}
-2. $B = Cl(A)$
-3. $C = B \textbackslash A$
+#### Основной функционал
+
+```
+./hamming encode 4 7 1011 // 0110011
+./hamming decode 7 0110011 // 1011
+./hamming is_valid 7 0110010 // 0
+```
+
+#### Тесты
+Реализованы 9 тестов для проверки функционала:
+* Базовые тесты
+* Краевые тесты
+* Стресс тесты
+
+Для запуска тестов
+```
+make test
+./test
+```
+
+
